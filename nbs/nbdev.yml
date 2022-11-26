@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "housing-ageron-nbdev"
+  site-url: "https://BriceChivu.github.io/housing-ageron-nbdev"
+  description: "Chapter 2 of Ageron ML book using nbdev"
+  repo-branch: main
+  repo-url: "https://github.com/BriceChivu/housing-ageron-nbdev"
