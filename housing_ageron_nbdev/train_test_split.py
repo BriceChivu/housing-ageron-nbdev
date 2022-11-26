@@ -3,6 +3,13 @@
 # %% auto 0
 __all__ = ['get_project_path']
 
+# %% ../nbs/00_train_test_split.ipynb 5
+import matplotlib.pyplot as plt
+import matplotlib
+import pandas as pd
+import numpy as np
+from pathlib import Path
+
 # %% ../nbs/00_train_test_split.ipynb 7
 def get_project_path()->Path:
     """

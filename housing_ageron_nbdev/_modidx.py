@@ -6,6 +6,4 @@ d = { 'settings': { 'branch': 'main',
                 'git_url': 'https://github.com/BriceChivu/housing-ageron-nbdev',
                 'lib_path': 'housing_ageron_nbdev'},
   'syms': { 'housing_ageron_nbdev.train_test_split': { 'housing_ageron_nbdev.train_test_split.get_project_path': ( 'train_test_split.html#get_project_path',
-                                                                                                                   'housing_ageron_nbdev/train_test_split.py'),
-                                                       'housing_ageron_nbdev.train_test_split.load_housing_raw_data': ( 'train_test_split.html#load_housing_raw_data',
-                                                                                                                        'housing_ageron_nbdev/train_test_split.py')}}}
+                                                                                                                   'housing_ageron_nbdev/train_test_split.py')}}}
