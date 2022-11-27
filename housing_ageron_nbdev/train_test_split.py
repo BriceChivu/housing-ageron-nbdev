@@ -3,7 +3,7 @@
 # %% auto 0
 __all__ = ['get_project_path', 'plot_correlation']
 
-# %% ../nbs/00_train_test_split.ipynb 7
+# %% ../nbs/00_train_test_split.ipynb 8
 def get_project_path() -> Path:
     """
     Get the path of the root project
@@ -11,7 +11,7 @@ def get_project_path() -> Path:
     return Path.cwd().parent.resolve()
 
 
-# %% ../nbs/00_train_test_split.ipynb 11
+# %% ../nbs/00_train_test_split.ipynb 12
 def plot_correlation(
     df: pd.DataFrame,  # dataframe for which to plot the correlation matrix
 ):
@@ -19,7 +19,7 @@ def plot_correlation(
     Plot a correlation matrix
     '''
     fig, ax = plt.subplots(figsize=(20, 10))
-    corr = df.corr()
+    corr = df.corr(numeric_only=True)
     ax = sns.heatmap(corr, square=True, ax=ax, annot=True, cmap="coolwarm")
     ax.set_title("Correlation of each feature")
     plt.tight_layout()
