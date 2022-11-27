@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "housing-ageron-nbdev",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "housing-ageron-nbdev",
+    "section": "Install",
+    "text": "Install\npip install housing_ageron_nbdev"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "housing-ageron-nbdev",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1"
+  },
+  {
+    "objectID": "train_test_split.html",
+    "href": "train_test_split.html",
+    "title": "Train/test splitting",
+    "section": "",
+    "text": "When splitting our data, we want to make sure the training set is representative of the cases we want to generalize to. Otherwise, we would train machine learning models that would not make accurate predictions. That is why we need to make sure the distribution of key features correlated to our target are preserved in the test set. By doing so, we are evaluating our machine learning models against representative data and hence, we can trust the quality of our models’ predictions.\nSplitting the data in this manner is called stratified sampling. To do so, we need to have a look at how each feature is correlated to our target (house_median_value). This is what we will do now.\n\nCorrelation matrix\n\nplt.rcParams[\"figure.figsize\"] = (15, 6)\nplt.style.use(\"ggplot\")\nplt.rcParams[\"axes.prop_cycle\"] = matplotlib.cycler(color=[\"#1f77b4\", \"red\"])\n\n\n# Load the data\ndf_housing_raw = pd.read_excel(get_project_path() / \"data\" / \"raw\" / \"housing.xlsx\")\ndf_housing_raw.head()\n\n\n\n\n\n  \n    \n      \n      longitude\n      latitude\n      housing_median_age\n      total_rooms\n      total_bedrooms\n      population\n      households\n      median_income\n      median_house_value\n      ocean_proximity\n    \n  \n  \n    \n      0\n      -122.23\n      37.88\n      41\n      880\n      129.0\n      322\n      126\n      8.3252\n      452600\n      NEAR BAY\n    \n    \n      1\n      -122.22\n      37.86\n      21\n      7099\n      1106.0\n      2401\n      1138\n      8.3014\n      358500\n      NEAR BAY\n    \n    \n      2\n      -122.24\n      37.85\n      52\n      1467\n      190.0\n      496\n      177\n      7.2574\n      352100\n      NEAR BAY\n    \n    \n      3\n      -122.25\n      37.85\n      52\n      1274\n      235.0\n      558\n      219\n      5.6431\n      341300\n      NEAR BAY\n    \n    \n      4\n      -122.25\n      37.85\n      52\n      1627\n      280.0\n      565\n      259\n      3.8462\n      342200\n      NEAR BAY\n    \n  \n\n\n\n\n\nplot_correlation(df_housing_raw)\n\n\n\n\nOur target is median_house_value. We can see that median_income is strongly correlated to it. We can use it to stratify our train/test splitting."
+  }
+]
